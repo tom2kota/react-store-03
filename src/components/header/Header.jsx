@@ -3,6 +3,7 @@ import imgLogo from '../../images/logo192.png'
 import {HeaderContainer, LogoContainer, OptionsContainer, OptionsLink} from './headerStyles';
 import {auth} from '../../firebase/firebase.utils';
 import {connect} from 'react-redux';
+import {CartIcon} from "../cart-icon/cartIcon";
 
 const Header = ({currentUser}) => (
     <HeaderContainer>
@@ -32,6 +33,7 @@ const Header = ({currentUser}) => (
                     Sign Out
                 </OptionsLink>
             }
+            <CartIcon/>
         </OptionsContainer>
 
     </HeaderContainer>
