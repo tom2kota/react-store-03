@@ -1,9 +1,10 @@
 import React from "react";
 import imgLogo from '../../images/logo192.png'
-import {HeaderContainer, LogoContainer, OptionsContainer, OptionsLink} from "./headerStyles";
+import {HeaderContainer, LogoContainer, OptionsContainer, OptionsLink} from './headerStyles';
 import {auth} from '../../firebase/firebase.utils';
+import {connect} from 'react-redux';
 
-export const Header = ({currentUser}) => (
+const Header = ({currentUser}) => (
     <HeaderContainer>
 
         <LogoContainer to='/'>
@@ -35,3 +36,9 @@ export const Header = ({currentUser}) => (
 
     </HeaderContainer>
 )
+
+const mapStateToProps = state => ({
+    currentUser: state.user.currentUser
+})
+
+export default connect(mapStateToProps)(Header)
