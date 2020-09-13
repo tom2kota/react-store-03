@@ -1,7 +1,7 @@
 import React from "react";
 import {ReactComponent as ShoppingIcon} from "../../images/shopping-bag.svg";
 
-import './cartIcon.scss';
+import './CartIcon.scss';
 
 export const CartIcon = () => (
     <div className='cart-icon'>
