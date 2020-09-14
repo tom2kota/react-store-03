@@ -3,9 +3,10 @@ import imgLogo from '../../images/logo192.png'
 import {HeaderContainer, LogoContainer, OptionsContainer, OptionsLink} from './headerStyles';
 import {auth} from '../../firebase/firebase.utils';
 import {connect} from 'react-redux';
-import {CartIcon} from "../cart-icon/CartIcon";
+import CartIcon from "../cart-icon/CartIcon";
+import {CartDropdown} from "../cart-dropdown/CartDropdown";
 
-const Header = ({currentUser}) => (
+const Header = ({currentUser, hidden}) => (
     <HeaderContainer>
 
         <LogoContainer to='/'>
@@ -35,12 +36,13 @@ const Header = ({currentUser}) => (
             }
             <CartIcon/>
         </OptionsContainer>
-
+        {hidden ? null : <CartDropdown/>}
     </HeaderContainer>
 )
 
-const mapStateToProps = state => ({
-    currentUser: state.user.currentUser
+const mapStateToProps = ({user: {currentUser}, cart: {hidden}}) => ({
+    currentUser,
+    hidden
 })
 
 export default connect(mapStateToProps)(Header)
