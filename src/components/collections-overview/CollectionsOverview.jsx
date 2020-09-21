@@ -12,8 +12,7 @@ const CollectionsOverview = ({collections}) => (
 )
 
 const mapStateToProps = ({shop: {collections}}) => ({
-    collections
+    collections: Object.keys(collections).map(key => collections[key])
 })
-
 
 export default connect(mapStateToProps)(CollectionsOverview)
