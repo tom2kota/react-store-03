@@ -1,7 +1,20 @@
-# React Store App (react: 16.13.1)
+# React Store App (React: 16.14.0)
 
 E-commerce project DEMO:
-- [vercel.app link](https://react-store-03.vercel.app)
+- [Client](https://react-store-03.vercel.app)
+- [Server](https://react-store-express-server.herokuapp.com) or [Clone repo & run server on localhost](https://github.com/tom2kota/react-store-server)
+- [Stripe Dashboard](https://dashboard.stripe.com/test/dashboard)
+- [Firebase](https://console.firebase.google.com)
+
+
+``` 
+    npm run start
+```
+
+Go to [localhost:3000](http://localhost:3000)
+
+
+![img](./public/payment.png)
 
 ---------------
 
